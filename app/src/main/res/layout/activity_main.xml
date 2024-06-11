@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     tools:context=".MainActivity">
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/time_circle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         app:indicatorInset="16dp"
         app:indicatorSize="256dp"
         app:indicatorTrackGapSize="0dp"
         app:trackCornerRadius="0dp"
         app:trackThickness="64dp" />
 
-</LinearLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_display"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text=""
+        android:textSize="64sp"
+        android:textStyle="bold" />
+
+</FrameLayout>

@@ -18,14 +18,4 @@
         app:trackCornerRadius="0dp"
         app:trackThickness="64dp" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/time_display"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text=""
-        android:textSize="64sp"
-        android:textStyle="bold" />
-
 </FrameLayout>

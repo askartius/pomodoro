@@ -11,4 +11,4 @@ A minimalistic **pomodoro timer**
 **Short tap** - switch mode. **Long tap** - start the timer.
 
 > [!CAUTION]
-> At this point in time, any change in the UI (screen orientation, theme) will stop the timer
+> As of now, any change in UI (screen orientation, theme) will cause the timer to stop

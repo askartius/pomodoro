@@ -16,6 +16,6 @@
         app:indicatorSize="256dp"
         app:indicatorTrackGapSize="0dp"
         app:trackCornerRadius="0dp"
-        app:trackThickness="64dp" />
+        app:trackThickness="64dp"/>
 
 </FrameLayout>

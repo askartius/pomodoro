@@ -1,9 +1,13 @@
 package askartius.pomodoro;
 
+import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.PowerManager;
+import android.provider.Settings;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -41,13 +45,20 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
+        if (!powerManager.isIgnoringBatteryOptimizations(getPackageName())) {
+            startActivity(new Intent()
+                    .setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                    .setData(Uri.parse("package: " + getPackageName()))
+            );
+        }
+
         timerCircle = findViewById(R.id.timer_circle);
         soundPool = new SoundPool.Builder()
-                .setAudioAttributes(
-                        new AudioAttributes.Builder()
-                                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                                .setUsage(AudioAttributes.USAGE_ALARM)
-                                .build()
+                .setAudioAttributes(new AudioAttributes.Builder()
+                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                        .setUsage(AudioAttributes.USAGE_ALARM)
+                        .build()
                 )
                 .build();
         dingSound = soundPool.load(this, R.raw.ding, 1);

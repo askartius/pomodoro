@@ -4,7 +4,6 @@ import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -23,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private int timerTime = 0;
     private boolean timerRunning = false;
     private CountDownTimer timer;
-
-    CircularProgressIndicator timeCircle;
+    private CircularProgressIndicator timeCircle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
             timerRunning = savedInstanceState.getBoolean(TIMER_RUNNING);
             timeCircle.setProgress(savedInstanceState.getInt(PROGRESS));
             timeCircle.setMax(timerTime);
-            Log.d("TEST", "T" + timerTime);
-
 
             if (timerTime == 1500) { // If timerTime == focus time
                 timeCircle.setIndicatorColor(getColor(R.color.red));

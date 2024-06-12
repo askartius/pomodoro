@@ -4,8 +4,6 @@ import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
-import android.os.Looper;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 )
                 .build();
         int ding = soundPool.load(this, R.raw.ding, 1);
-
-        Handler handler = new Handler(getMainLooper());
 
         switchMode();
 

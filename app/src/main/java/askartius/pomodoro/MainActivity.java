@@ -45,14 +45,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
-        if (!powerManager.isIgnoringBatteryOptimizations(getPackageName())) {
-            startActivity(new Intent()
-                    .setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
-                    .setData(Uri.parse("package: " + getPackageName()))
-            );
-        }
-
         timerCircle = findViewById(R.id.timer_circle);
         soundPool = new SoundPool.Builder()
                 .setAudioAttributes(new AudioAttributes.Builder()

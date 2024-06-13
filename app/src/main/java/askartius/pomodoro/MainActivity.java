@@ -1,13 +1,9 @@
 package askartius.pomodoro;
 
-import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.PowerManager;
-import android.provider.Settings;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;

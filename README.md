@@ -9,6 +9,3 @@ A minimalistic **pomodoro timer**
 - ${\color{#40E020}relax}$ for 5 min
 
 **Short tap** - switch mode. **Long tap** - start the timer.
-
-> [!CAUTION]
-> As of now, any change in UI (screen orientation, theme) will cause the timer to stop
